@@ -7,14 +7,49 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/saida"
+        android:id="@+id/labelinput1"
+        android:layout_width="359dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Entrada 1"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelinput2"
+        android:layout_width="356dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="160dp"
+        android:text="Entrada 2"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Digite um número"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/labelinput1"
+        app:layout_constraintTop_toBottomOf="@+id/labelinput1" />
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Digite outro número"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/labelinput2"
+        app:layout_constraintTop_toBottomOf="@+id/labelinput2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
