@@ -40,4 +40,24 @@ public class MainActivity extends AppCompatActivity {
         Double resultSum = input1D + input2D;
         result.setText(resultSum.toString());
     }
+
+    public void sub(View view){
+        setInputs(view);
+        Double resultSum = input1D - input2D;
+        result.setText(resultSum.toString());
+    }
+
+    public void mult(View view){
+        setInputs(view);
+        Double resultSum = input1D * input2D;
+        result.setText(resultSum.toString());
+    }
+
+    public void div(View view){
+        setInputs(view);
+        Double resultSum = input1D / input2D;
+        result.setText(resultSum.toString());
+    }
+
+
 }

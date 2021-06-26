@@ -78,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:onClick="sub"
         android:text="Sub"
         app:layout_constraintStart_toEndOf="@+id/sum"
         app:layout_constraintTop_toTopOf="@+id/sum" />
@@ -88,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:onClick="mult"
         android:text="mult"
         app:layout_constraintStart_toEndOf="@+id/sub"
         app:layout_constraintTop_toTopOf="@+id/sub" />
@@ -98,6 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:onClick="div"
         android:text="div"
         app:layout_constraintStart_toEndOf="@+id/mult"
         app:layout_constraintTop_toTopOf="@+id/mult" />
