@@ -52,4 +52,25 @@
         app:layout_constraintStart_toStartOf="@+id/labelinput2"
         app:layout_constraintTop_toBottomOf="@+id/labelinput2" />
 
+    <Button
+        android:id="@+id/sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="sum"
+        android:text="sum"
+        app:layout_constraintStart_toStartOf="@+id/input2"
+        app:layout_constraintTop_toBottomOf="@+id/input2" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="-"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
