@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
     private EditText input1;
     private EditText input2;
@@ -29,34 +27,54 @@ public class MainActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
     }
 
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch(NumberFormatException e){
+            return false;
+        }
+    }
 
-    public void setInputs(View view){
-        input1D = Double.parseDouble(input1.getText().toString());
-        input2D = Double.parseDouble(input2.getText().toString());
+    public boolean setInputs(View view){
+
+
+        if(isNumeric(input1.getText().toString()) && isNumeric(input2.getText().toString())) {
+            input1D = Double.parseDouble(input1.getText().toString());
+            input2D = Double.parseDouble(input2.getText().toString());
+            return true;
+        }  else {
+            result.setText("erro de entrada");
+            return false;
+        }
     }
 
     public void sum(View view){
-        setInputs(view);
-        Double resultSum = input1D + input2D;
-        result.setText(resultSum.toString());
+        if(setInputs(view)) {
+            Double resultSum = input1D + input2D;
+            result.setText(resultSum.toString());
+        }
     }
 
     public void sub(View view){
-        setInputs(view);
-        Double resultSum = input1D - input2D;
-        result.setText(resultSum.toString());
+        if(setInputs(view)) {
+            Double resultSum = input1D - input2D;
+            result.setText(resultSum.toString());
+        }
     }
 
     public void mult(View view){
-        setInputs(view);
-        Double resultSum = input1D * input2D;
-        result.setText(resultSum.toString());
+        if(setInputs(view)) {
+            Double resultSum = input1D * input2D;
+            result.setText(resultSum.toString());
+        }
     }
 
     public void div(View view){
-        setInputs(view);
-        Double resultSum = input1D / input2D;
-        result.setText(resultSum.toString());
+        if(setInputs(view) && input2D != 0) {
+            Double resultSum = input1D / input2D;
+            result.setText(resultSum.toString());
+        }
     }
 
 
